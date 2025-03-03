@@ -1,0 +1,24 @@
+@charset "utf-8";
+/* CSS Document */
+/* Import version for all CSS files used within UQ Business School */
+/* superstyle.css */
+/* Core elements listed below, keep in order! */
+@import url("https://uq-business-school.github.io/styleguide/css/constraints.css");
+@import url("https://uq-business-school.github.io/styleguide/css/base.css");
+@import url("https://uq-business-school.github.io/styleguide/css/drupal-base.css");
+@import url("https://uq-business-school.github.io/styleguide/css/button.css");
+@import url("https://uq-business-school.github.io/styleguide/css/card.css");
+@import url("https://uq-business-school.github.io/styleguide/css/hero.css");
+@import url("https://uq-business-school.github.io/styleguide/css/global-alerts.css");
+@import url("https://uq-business-school.github.io/styleguide/css/global-oneuq.css");
+@import url("https://uq-business-school.github.io/styleguide/css/drupal-buttons-icons.css");
+/* Non-essential central stylesheets below */
+@import url("https://uq-business-school.github.io/styleguide/css/drupal-grids-footers-nav.css");
+@import url("https://uq-business-school.github.io/styleguide/css/drupal-other-forms-dates.css");
+/* Animation stylesheet(s) */
+@import url("https://uq-business-school.github.io/styleguide/css/aos.css");
+/* UQ Business School custom stylesheets */
+@import url("https://uq-business-school.github.io/styleguide/css/uqbs-base.css");
+@import url("https://uq-business-school.github.io/styleguide/css/uqbs-ultramask.css");
+/* Program specific CSS code */
+@import url("https://uq-business-school.github.io/styleguide/css/uqbs-bsan.css");
