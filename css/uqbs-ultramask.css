@@ -1,0 +1,122 @@
+@charset "utf-8";
+/* Global reset */
+* {
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+}
+
+:root{
+    /* Define colour palette to UQ BB Ultra specs */
+    /* Primary Colours */
+    --uq-purple: #51247A; /* PMS 268 */
+    --uq-black: #000000;
+    --uq-white: #FFFFFF;
+    
+    /* Secondary Colours */
+    --uq-green: #2EA836; /* PMS 362 */
+    --uq-red: #E62645; /* PMS 193 */
+    --uq-light-purple: #962A8B; /* PMS 7656 */
+	--uq-dark-purple: #1F0029;
+    --uq-gold: #BB9D65; /* PMS 465 */
+    --uq-dark-grey: #999490; /* PMS 408 */
+    --uq-yellow: #FBB800; /* PMS 143 */
+    --uq-orange: #EB602B; /* PMS 166 */
+    --uq-blue: #4085C6; /* PMS 2143 */
+    --uq-aqua: #00A2C7; /* PMS 7703 */
+    --uq-neutral: #D7D1CC; /* PMS 406 */
+
+    /* Blackboard Ultra Colors */
+    --bb-default: rgb(38, 38, 38);
+    --bb-link: #2075A3;
+}
+
+/* Body defaults */
+body {
+  font-family: "Open Sans", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  color: var(--bb-default); /* rgb(38,38,38) */
+  background-color: #fff;
+  line-height: 1.5;
+}
+
+/* Headings and Paragraphs */
+/* Common styles for h4, h5, h6, and p */
+h4, h5, h6, p {
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  margin: 0;
+  padding: 0;
+  font-style: normal;
+  text-rendering: optimizelegibility;
+  line-height: inherit;
+  counter-reset: list-1 0 list-2 0 list-3 0 list-4 0 list-5 0 list-6 0 list-7 0 list-8 0 list-9 0;
+  font-variant-ligatures: normal;
+  font-variant-caps: normal;
+  letter-spacing: normal;
+  orphans: 2;
+  text-align: left;
+  text-indent: 0;
+  text-transform: none;
+  widows: 2;
+  word-spacing: 0;
+  -webkit-text-stroke-width: 0;
+  white-space: pre-wrap;
+  text-decoration-thickness: initial;
+  text-decoration-style: initial;
+  text-decoration-color: initial;
+  cursor: text;
+}
+
+/* Heading-specific overrides */
+h4, h5, h6 {
+  font-family: "Open Sans", sans-serif;
+  font-weight: bold;
+  color: inherit;
+}
+
+h4 { font-size: 2em; }
+h5 { font-size: 1.5em; }
+h6 { font-size: 1em; }
+
+/* Paragraph-specific overrides */
+p {
+  font-family: "Open Sans", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  overflow-wrap: break-word;
+  margin-block-end: 1rem;
+  color: inherit;
+}
+
+
+/* Unordered list */
+ul {
+  padding: 0 3rem 0 1.5rem;
+  margin-bottom: 1rem;
+  list-style-position: outside;
+}
+
+ul li {
+  padding-left: 1.5em;
+  list-style-type: disc;
+}
+
+/* Ordered list */
+ol {
+  padding: 0 0 0 1.5em;
+  margin-bottom: 1rem;
+  list-style-position: outside;
+}
+
+ol li {
+  padding-left: 1.5em;
+  list-style-type: decimal;
+}
+
+/* Hyperlinks */
+a {
+  background-color: transparent;
+  color: var(--bb-link);
+  text-decoration: underline;
+  cursor: pointer;
+}

@@ -1,0 +1,351 @@
+@charset "utf-8";
+/* UQ Branding CSS Variables */
+:root {
+    /* Primary Colours */
+    --uq-purple: #51247A; /* PMS 268 */
+    --uq-black: #000000;
+    --uq-white: #FFFFFF;
+    
+    /* Secondary Colours */
+    --uq-green: #2EA836; /* PMS 362 */
+    --uq-red: #E62645; /* PMS 193 */
+    --uq-light-purple: #962A8B; /* PMS 7656 */
+    --uq-dark-purple: #1F0029;
+    --uq-gold: #BB9D65; /* PMS 465 */
+    --uq-yellow: #FBB800; /* PMS 143 */
+    --uq-orange: #EB602B; /* PMS 166 */
+    --uq-blue: #4085C6; /* PMS 2143 */
+    --uq-aqua: #00A2C7; /* PMS 7703 */
+	
+	/* Neutral Colours */
+    --uq-neutral: #D7D1CC; /* PMS 406 */
+	--uq-neutral20: #F7F6F5;
+	--uq-neutral40: #EFECEA;
+	--uq-neutral60: #E7E3E0;
+	--uq-neutral80: #DFDAD6;
+    --uq-dark-grey: #999490; /* PMS 408 */
+	--uq-dark-grey20: #EBE8E7;
+	--uq-dark-grey40: #D8D2D0;
+	--uq-dark-grey60: #C4BDBA;
+	--uq-dark-grey80: #B1A8A4;
+    
+    /* Gradients - Undergrad (aka purple) */
+    --uq-purple-gradient: linear-gradient(to bottom,#51247A 0%, #51247A 80%, #962A8B 100%);
+    --uq-purple-gradient-vertical: linear-gradient(to bottom, var(--uq-purple) 0%, var(--uq-purple) 80%, var(--uq-light-purple) 100%);
+    --uq-purple-gradient-horizontal: linear-gradient(to right, var(--uq-purple) 0%, var(--uq-purple) 80%, var(--uq-light-purple) 100%);
+    --uq-purple-gradient-diagonal-tl-br: linear-gradient(to bottom right, var(--uq-purple) 0%, var(--uq-purple) 80%, var(--uq-light-purple) 100%);
+    --uq-purple-gradient-diagonal-tr-bl: linear-gradient(to bottom left, var(--uq-purple) 0%, var(--uq-purple) 80%, var(--uq-light-purple) 100%);
+	
+	/* Gradients - Postgrad (aka dark-purple) */
+	--uq-postgrad-gradient: linear-gradient(to bottom, #51247A 70%, #1F0029 100%);
+    --uq-postgrad-gradient-vertical: linear-gradient(to bottom, var(--uq-purple) 0%, var(--uq-purple) 70%, var(--uq-dark-purple) 100%);
+    --uq-postgrad-gradient-horizontal: linear-gradient(to right, var(--uq-purple) 0%, var(--uq-purple) 70%, var(--uq-dark-purple) 100%);
+    --uq-postgrad-gradient-diagonal-tl-br: linear-gradient(to bottom right, var(--uq-purple) 0%, var(--uq-purple) 70%, var(--uq-dark-purple) 100%);
+    --uq-postgrad-gradient-diagonal-tr-bl: linear-gradient(to bottom left, var(--uq-purple) 0%, var(--uq-purple) 70%, var(--uq-dark-purple) 100%);
+
+
+	
+    /* Typography */
+    --font-heading: 'Open Sans', sans-serif; /*'Merriweather' is the correct font, but 'Open Sans' is the default on Blackboard Ultra. */
+    --font-body: 'Open Sans', 'Arial', sans-serif;
+    
+    /* Font Weights */
+    --font-light: 300;
+    --font-regular: 400;
+    --font-medium: 500;
+    --font-bold: 700;
+}
+
+/* General Typography */
+body {
+    font-family: var(--font-body);
+    color: var(--uq-black);
+    background-color: var(--uq-white);
+    line-height: 1.6;
+}
+
+/* Default Heading Color */
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+    font-weight: var(--font-bold);
+    color: var(--uq-purple); 
+}
+
+p {
+    font-family: var(--font-body);
+    font-weight: var(--font-regular);
+	color: inherit;
+}
+
+
+/* Buttons - These have been commented out to prevent clashes with other items *
+.button {
+    background-color: var(--uq-purple);
+    color: var(--uq-white);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: var(--font-medium);
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: var(--uq-light-purple);
+}
+.button:active {
+    background-color: var(--uq-dark-purple);
+}
+
+/* Links - These have been commented out to prevent clashes with other items *
+a {
+    color: var(--uq-blue);
+    text-decoration: none;
+    font-weight: var(--font-medium);
+}
+
+a:hover {
+    color: var(--uq-aqua);
+    text-decoration: underline;
+}
+
+/* Graphic Device */
+.graphic-device-left {
+    background: url('https://uqgblaze.github.io/UQ-Swoosh/live/style/graphic-device-curve_leftside.svg') no-repeat bottom left;
+    background-size: contain;
+}
+
+.graphic-device-right {
+    background: url('https://uqgblaze.github.io/UQ-Swoosh/live/style/graphic-device-flourish_rightside.svg') no-repeat bottom right;
+    background-size: contain;
+}
+
+/* UQ Logos */
+.uq-logo-purple {
+    background: url('https://uqgblaze.github.io/UQ-Swoosh/live/style/uq-logo--purple.svg') no-repeat center;
+    background-size: contain;
+}
+
+.uq-logo-white {
+    background: url('https://uqgblaze.github.io/UQ-Swoosh/live/style/uq-logo--white.svg') no-repeat center;
+    background-size: contain;
+}
+
+.uq-logo-stacked-purple {
+    background: url('https://uqgblaze.github.io/UQ-Swoosh/live/style/uq-logo-Stacked--purple.svg') no-repeat center;
+    background-size: contain;
+}
+
+.uq-logo-stacked-white {
+    background: url('https://uqgblaze.github.io/UQ-Swoosh/live/style/uq-logo-Stacked--white.svg') no-repeat center;
+    background-size: contain;
+}
+
+/* Utility Classes */
+.text-center {
+    text-align: center;
+}
+
+.text-bold {
+    font-weight: var(--font-bold);
+}
+.uq-hero-subheading{
+    color: var(--uq-dark-grey40);
+}
+
+/* Text Color Overrides */
+   	/* Primary Colours */
+.text-purple{
+	color: var(--uq-purple)!important;
+}
+.text-white{
+	color: var(--uq-white)!important;
+}
+.text-black{
+	color: var(--uq-black)!important;
+}
+	/* Secondary Colours */
+.text-green{
+	color: var(--uq-green)!important;
+}
+.text-red{
+	color: var(--uq-red)!important;
+}
+.text-light-purple{
+	color: var(--uq-light-purple)!important;
+}
+.text-dark-purple{
+	color: var(--uq-dark-purple)!important;
+}
+.text-gold{
+	color: var(--uq-gold)!important;
+}
+.text-yellow{
+	color: var(--uq-yellow)!important;
+}
+.text-orange{
+	color: var(--uq-orange)!important;
+}
+.text-blue{
+	color: var(--uq-blue)!important;
+}
+.text-aqua{
+	color: var(--uq-aqua)!important;
+}
+	/* Neutral Colours */
+.text-neutral{
+	color: var(--uq-neutral)!important;
+}
+.text-dark-grey{
+	color: var(--uq-dark-grey)!important;
+}
+/* -------------------- */
+
+
+/* Backgrounds - Solid */
+	/* Primary Colours */
+.bg-purple {
+    background-color: var(--uq-purple);
+}
+.bg-black {
+    background-color: var(--uq-black);
+}
+	/* Secondary Colours */
+.bg-light-purple {
+    background-color: var(--uq-light-purple);
+}
+.bg-dark-purple {
+    background-color: var(--uq-dark-purple);
+}
+.bg-green {
+    background-color: var(--uq-green);
+}
+.bg-red {
+    background-color: var(--uq-red);
+}
+.bg-gold {
+    background-color: var(--uq-gold);
+}
+.bg-blue {
+    background-color: var(--uq-blue);
+}
+.bg-yellow {
+    background-color: var(--uq-yellow);
+}
+.bg-orange {
+    background-color: var(--uq-orange);
+}
+.bg-aqua {
+    background-color: var(--uq-aqua);
+}
+	/* Neutral Colours */
+.bg-neutral {
+    background-color: var(--uq-neutral);
+    color: inherit;
+}
+.bg-neutral20 {
+    background-color: var(--uq-neutral20);
+    color: inherit;
+}
+.bg-neutral40 {
+    background-color: var(--uq-neutral40);
+    color: inherit;
+}
+.bg-neutral60 {
+    background-color: var(--uq-neutral60);
+    color: inherit;
+}
+.bg-neutral80 {
+    background-color: var(--uq-neutral80);
+    color: inherit;
+}
+.bg-dark-grey {
+    background-color: var(--uq-dark-grey);
+}
+.bg-dark-grey20 {
+    background-color: var(--uq-dark-grey20);
+}
+.bg-dark-grey40 {
+    background-color: var(--uq-dark-grey40);
+}
+.bg-dark-grey60 {
+    background-color: var(--uq-dark-grey60);
+}
+.bg-dark-grey80 {
+    background-color: var(--uq-dark-grey80);
+}
+.bg-white{
+	background-color: var(--uq-white);
+	color: inherit;
+	border: 1px solid var(--uq-purple);
+}
+/* -------------------- */
+
+/* Backgrounds - Gradients */
+.bg-purple-gradient {
+	background: var(--uq-purple-gradient);
+    color: var(--uq-white);
+    padding: 10px;
+}
+.bg-purple-gradient-vertical {
+	background: var( --uq-purple-gradient-vertical);
+    color: var(--uq-white);
+    padding: 10px;
+}
+.bg-purple-gradient-horizontal {
+	background: var( --uq-purple-gradient-horizontal);
+    color: var(--uq-white);
+    padding: 10px;
+}
+
+.bg-postgrad-gradient {
+	background: var(--uq-postgrad-gradient);
+    color: var(--uq-white);
+    padding: 10px;
+}
+.bg-postgrad-gradient-vertical {
+	background: var( --uq-postgrad-gradient-vertical);
+    color: var(--uq-white);
+    padding: 10px;
+}
+.bg-postgrad-gradient-horizontal {
+	background: var( --uq-postgrad-gradient-horizontal);
+    color: var(--uq-white);
+    padding: 10px;
+}
+
+/* Background-Based Heading Colors */
+.bg-purple, .bg-black, .bg-light-purple, .bg-dark-purple,  
+.bg-purple-gradient, .bg-purple-gradient-vertical, .bg-purple-gradient-horizontal, 
+.bg-postgrad-gradient, .bg-postgrad-gradient-vertical, .bg-postgrad-gradient-horizontal  {
+    --heading-color: var(--uq-white);
+	color: var(--uq-white);
+}
+
+.bg-blue, .bg-green, .bg-red, .bg-gold, .bg-orange, .bg-aqua, .bg-yellow, .bg-dark-grey {
+    --heading-color: var(--uq-black);
+	color: var(--uq-black);
+}
+
+/* Apply the Variable to Headings */
+.bg-purple h1, .bg-purple h2, .bg-purple h3, .bg-purple h4, .bg-purple h5, .bg-purple h6,
+.bg-black h1, .bg-black h2, .bg-black h3, .bg-black h4, .bg-black h5, .bg-black h6,
+.bg-light-purple h1, .bg-light-purple h2, .bg-light-purple h3, .bg-light-purple h4, .bg-light-purple h5, .bg-light-purple h6,
+.bg-dark-purple h1, .bg-dark-purple h2, .bg-dark-purple h3, .bg-dark-purple h4, .bg-dark-purple h5, .bg-dark-purple h6,
+.bg-blue h1, .bg-blue h2, .bg-blue h3, .bg-blue h4, .bg-blue h5, .bg-blue h6,
+.bg-green h1, .bg-green h2, .bg-green h3, .bg-green h4, .bg-green h5, .bg-green h6,
+.bg-red h1, .bg-red h2, .bg-red h3, .bg-red h4, .bg-red h5, .bg-red h6,
+.bg-gold h1, .bg-gold h2, .bg-gold h3, .bg-gold h4, .bg-gold h5, .bg-gold h6,
+.bg-orange h1, .bg-orange h2, .bg-orange h3, .bg-orange h4, .bg-orange h5, .bg-orange h6,
+.bg-aqua h1, .bg-aqua h2, .bg-aqua h3, .bg-aqua h4, .bg-aqua h5, .bg-aqua h6,
+.bg-yellow h1, .bg-yellow h2, .bg-yellow h3, .bg-yellow h4, .bg-yellow h5, .bg-yellow h6,
+.bg-dark-grey h1, .bg-dark-grey h2, .bg-dark-grey h3, .bg-dark-grey h4, .bg-dark-grey h5, .bg-dark-grey h6, 
+.bg-purple-gradient h1, .bg-purple-gradient h2, .bg-purple-gradient h3, .bg-purple-gradient h4, .bg-purple-gradient h5, .bg-purple-gradient h6,
+.bg-purple-gradient-vertical h1, .bg-purple-gradient-vertical h2, .bg-purple-gradient-vertical h3, .bg-purple-gradient-vertical h4, .bg-purple-gradient-vertical h5, .bg-purple-gradient-vertical h6,
+.bg-purple-gradient-horizontal h1, .bg-purple-gradient-horizontal h2, .bg-purple-gradient-horizontal h3, .bg-purple-gradient-horizontal h4, .bg-purple-gradient-horizontal h5, .bg-purple-gradient-horizontal h6,
+.bg-postgrad-gradient h1, .bg-postgrad-gradient h2, .bg-postgrad-gradient h3, .bg-postgrad-gradient h4, .bg-postgrad-gradient h5, .bg-postgrad-gradient h6
+.bg-postgrad-gradient-vertical h1, .bg-postgrad-gradient-vertical h2, .bg-postgrad-gradient-vertical h3, .bg-postgrad-gradient-vertical h4, .bg-postgrad-gradient-vertical h5, .bg-postgrad-gradient-vertical h6,
+.bg-postgrad-gradient-horizontal h1, .bg-postgrad-gradient-horizontal h2, .bg-postgrad-gradient-horizontal h3, .bg-postgrad-gradient-horizontal h4, .bg-postgrad-gradient-horizontal h5, .bg-postgrad-gradient-horizontal h6 {
+    color: var(--heading-color, var(--uq-purple));
+}
+/* -------------------- */
