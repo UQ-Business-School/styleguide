@@ -78,6 +78,9 @@
 			padding-top: 32px;
 			padding-bottom: 32px;
 		}
+/* Used for button generator */
+.bb-link-hover {background-color: transparent!important;}
+.bb-link-hover:hover {color: var(--uq-light-purple);}
 /* -- Fix for the heroes, buttons having a url background color turning purple --*/
 .uq-hero-basic__back a:hover{background-color: transparent;}
 .uq-button {color: #fff;}
