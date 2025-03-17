@@ -1,157 +1,160 @@
-@charset "utf-8";
-/* CSS Document */
-/* imagePicker.css */
+/* ---- Modal Overlay Styles ---- */
+    .image-picker-overlay {
+      position: fixed;
+      z-index: 9999;
+      top: 0; left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0,0,0,0.5);
+      display: none;
+      align-items: center;
+      justify-content: center;
+    }
+    .image-picker-overlay.active {
+      display: flex;
+    }
+    .image-picker-dialog {
+      background-color: #fff;
+      width: 60vw; /* 60% of the width of the viewport for the modal picker */
+      height: 80vh; /* 80% of the height of the viewport for the modal picker */
+      border-radius: 5px;
+      position: relative;
+      padding: 20px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+      overflow: auto;
+    }
+    .image-picker-dialog h2 {
+      margin-top: 0;
+    }
+    .close-modal-button {
+      position: absolute;
+      top: 15px;
+      right: 15px;
+      background: none;
+      border: none;
+      font-size: 1.4rem;
+      font-weight: bold;
+      cursor: pointer;
+      color: var(--uq-red);
+    }
+    /* Scrollable grid container */
+    .image-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+      grid-gap: 15px;
+      margin-top: 1rem;
+      border: 1px solid #ddd;
+      padding: 10px;
+      border-radius: 4px;
+    }
+    .image-grid-item {
+      cursor: pointer;
+      text-align: center;
+      border: 1px solid transparent;
+      padding: 4px;
+      border-radius: 4px;
+    }
+    .image-grid-item:hover {
+      border-color: #51247a;
+    }
+    .image-grid-item img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+      margin: 0 auto;
+      border-radius: 4px;
+    }
+    .image-grid-item p {
+      font-size: 12px;
+      margin-top: 5px;
+      color: #444;
+    }
+    .grid-subheading {
+      grid-column: 1 / -1;
+      margin: 10px 0 0;
+      font-weight: bold;
+      font-size: 14px;
+      color: #51247a;
+    }
+    .custom-url-section, .unsplash-search-section {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-top: 1rem;
+    }
+    .custom-url-section label, .unsplash-search-section label {
+      flex-shrink: 0;
+      margin-bottom: 0;
+    }
+    .input-parent {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: 1fr;
+      grid-column-gap: 32px;
+      grid-row-gap: 0px;
+    }
+    .input-left { grid-area: 1 / 1 / 2 / 2; }
+    .input-right { grid-area: 1 / 2 / 2 / 3; }
 
-/* Modal Styles */
-.ip-modal {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.5);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 9999;
-}
+    /* ----- Cropping Tool Styles ----- */
+    #cropContainer {
+      position: relative;
+      display: inline-block;
+      max-width: 100%;
+    }
+    #cropContainer img {
+      display: block;
+      max-width: 100%;
+	  max-height: 60vh;
+	  -webkit-user-drag: none;  /* Chrome, Safari, Opera */
+      -khtml-user-drag: none;   /* Older versions of Konqueror */
+      -moz-user-drag: none;     /* Firefox (not always needed) */
+      user-drag: none;          /* Standard property (if supported) */
+      user-select: none;        /* Prevent text selection around the image */	
+    }
+    /* The crop box itself is transparent; we use a pseudo-element for the animated dashed border */
+    #cropBox {
+      position: absolute;
+      box-sizing: border-box;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      /* Prevent pointer events so that we can interact with the underlying image if needed */
+      pointer-events: none;
+    }
+    #cropBox::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      border: 2px dashed #E62645;
+      pointer-events: none;
+      /* Animated dashed border effect */
+      background: linear-gradient(90deg, rgba(255, 255, 255, 0.5) 0%, transparent 100%);
+      background-size: 8px 8px;
+      animation: dash 2s linear infinite;
+    }
+    @keyframes dash {
+      from { background-position: 0 0, 0 0; }
+      to { background-position: 8px 8px, 8px 8px; }
+    }
+    /* Resize handles remain visible and draggable */
+    .resize-handle {
+      width: 16px;
+      height: 16px;
+      background: #E62645;
+      position: absolute;
+      cursor: nwse-resize;
+      pointer-events: all;
+    }
+    .handle-tl { top: -10px; left: -10px; cursor: nwse-resize; }
+    .handle-tr { top: -10px; right: -10px; cursor: nesw-resize; }
+    .handle-bl { bottom: -10px; left: -10px; cursor: nesw-resize; }
+    .handle-br { bottom: -10px; right: -10px; cursor: nwse-resize; }
 
-.ip-dialog {
-  background: #fff;
-  width: 80vw;
-  height: 80vh;
-  border-radius: 5px;
-  padding: 20px;
-  position: relative;
-  overflow: auto;
-}
-
-/* Close Button */
-.ip-close-btn {
-  position: absolute;
-  top: 15px;
-  right: 15px;
-  background: none;
-  border: none;
-  font-size: 1.4rem;
-  font-weight: bold;
-  cursor: pointer;
-  color: #d00; /* Adjust as needed */
-}
-
-/* Tabs */
-.ip-tabs {
-  display: flex;
-  border-bottom: 1px solid #ddd;
-  margin-bottom: 10px;
-}
-
-.ip-tab {
-  flex: 1;
-  padding: 10px;
-  background: none;
-  border: none;
-  cursor: pointer;
-  font-weight: bold;
-  color: #000;  /* Ensures text is visible */
-}
-
-.ip-tab.active {
-  border-bottom: 3px solid #51247a;
-  color: #51247a;
-}
-
-/* Content Area */
-.ip-content {
-  margin-top: 10px;
-}
-
-/* Custom URL Section */
-.ip-custom-url {
-  margin-bottom: 10px;
-}
-
-.ip-custom-url input {
-  width: 70%;
-  padding: 5px;
-  font-size: 14px;
-}
-
-/* Image Grids */
-.ip-local-grid,
-.ip-unsplash-grid {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-}
-
-.ip-category {
-  width: 100%;
-}
-
-.ip-category h3 {
-  margin: 10px 0 5px;
-  font-size: 16px;
-  color: #51247a;
-}
-
-.ip-thumb {
-  width: 100px;
-  height: auto;
-  margin: 5px;
-  cursor: pointer;
-}
-
-/* Cropping Tool Styles */
-.ip-crop-dialog {
-  background: #fff;
-  width: 80vw;
-  height: 80vh;
-  border-radius: 5px;
-  padding: 20px;
-  position: relative;
-  overflow: hidden;
-}
-
-.ip-crop-container {
-  position: relative;
-  max-width: 100%;
-  max-height: calc(80vh - 100px);
-  overflow: hidden;
-  margin-bottom: 10px;
-}
-
-#ipCropImage {
-  display: block;
-  max-width: 100%;
-  max-height: 100%;
-  user-select: none;
-  -webkit-user-drag: none;
-}
-
-#ipCropBox {
-  position: absolute;
-  box-sizing: border-box;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  border: 2px dashed #51247a;
-  pointer-events: auto;
-}
-
-/* Resize Handles (Repositioned inside crop box) */
-.ip-resize-handle {
-  width: 10px;
-  height: 10px;
-  background: #51247a;
-  position: absolute;
-  cursor: nwse-resize;
-  pointer-events: all;
-}
-
-.ip-handle-tl { top: 0; left: 0; }
-.ip-handle-tr { top: 0; right: 0; cursor: nesw-resize; }
-.ip-handle-bl { bottom: 0; left: 0; cursor: nesw-resize; }
-.ip-handle-br { bottom: 0; right: 0; }
-
+    /* Overlays for dimming area outside crop box */
+    .crop-overlay {
+      position: absolute;
+      background: rgba(0, 0, 0, 0.5);
+      pointer-events: none;
+    }
