@@ -142,7 +142,7 @@
     showLocalTab();
 
     // Unsplash integration.
-    var UNSPLASH_ACCESS_KEY = "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"; // replace with your 43-character key
+    var UNSPLASH_ACCESS_KEY = "c5O1Qwh_6wwO57xx5T1bVtOS12mTZCuOfsGLMoE4S6M"; // replace with your 43-character key
     function searchUnsplash(query) {
       var grid = document.getElementById('ipUnsplashGrid');
       grid.innerHTML = "Loading...";
