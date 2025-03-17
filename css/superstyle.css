@@ -20,5 +20,6 @@
 /* UQ Business School custom stylesheets */
 @import url("https://uq-business-school.github.io/styleguide/css/uqbs-base.css");
 @import url("https://uq-business-school.github.io/styleguide/css/uqbs-ultramask.css");
+@import url("https://uq-business-school.github.io/styleguide/css/uqbs-general.css");
 /* Program specific CSS code */
 @import url("https://uq-business-school.github.io/styleguide/css/uqbs-bsan.css");
