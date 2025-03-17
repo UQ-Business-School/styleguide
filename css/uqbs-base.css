@@ -200,7 +200,26 @@ a:hover {
 	color: var(--uq-dark-grey)!important;
 }
 /* -------------------- */
-
+/* Adding in rounded corners for cleaner appearance */
+.uqbs-rounded-border{
+	border-radius: 8px;
+}
+.uqbs-rounded-border--all{
+	border-radius: 8px;
+}
+.uqbs-rounded-border--top{
+	border-radius: 8px 8px 0px 0px;
+}
+.uqbs-rounded-border--bottom{
+	border-radius: 0px 0px 8px 8px;
+}
+.uqbs-rounded-border--left{
+	border-radius: 8px 0px 0px 8px;
+}
+.uqbs-rounded-border--right{
+	border-radius: 0px 8px 8px 0px;
+}
+/* -------------------- */
 
 /* Backgrounds - Solid */
 	/* Primary Colours */
