@@ -64,6 +64,32 @@ body {
     line-height: 1.6;
 }
 
+/* Font overrides */
+
+		/* Import Atkinson Hyperlegible, Merriweather, Roboto, Open Sans and Montserrat fonts */
+		@import url('https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+		/* Apply Merriweather font */
+		.enable-merriweather {
+			font-family:  Merriweather, Georgia, Helvetica, Arial, sans-serif!important;
+		}
+		/* Apply Roboto font */
+		.enable-roboto {
+			font-family: Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif!important;
+		}
+		/* Apply Montserrat font */
+		.enable-montserrat {
+			font-family: Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif!important;
+		}
+		/* Apply Atkinson Hyperlegible font */
+		.enable-atkinson {
+			font-family: "Atkinson Hyperlegible", "Helvetica Neue", Helvetica, Arial, sans-serif!important;
+		}
+		/* Apply Open Sans font */
+		.enable-atkinson {
+			font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif!important;
+		}
+
 /* Default Heading Color */
 h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-heading);
@@ -200,6 +226,7 @@ a:hover {
 	color: var(--uq-dark-grey)!important;
 }
 /* -------------------- */
+
 /* Adding in rounded corners for cleaner appearance */
 .uqbs-rounded-border{
 	border-radius: 8px;
