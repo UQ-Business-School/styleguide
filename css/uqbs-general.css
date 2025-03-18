@@ -1,21 +1,18 @@
 /* CSS Document */
 /* Used for general course overview icons; can be used with or without the Super Style sheet */
-  body {
-    font-family: Arial, sans-serif;
-    max-width: 100%;
-    margin: 1rem;
-    line-height: 1.6;
-    overflow: hidden;
-  }
   .uqbs-general-container {
     display: flex;
-    align-items: center;
-    margin-bottom: 1.5rem;
+    align-items: center; 
     width: 100%;
     min-width: 250px;
-	background: #51247A; 
+    background: #51247A; 
     border-radius: 5px;
     overflow: auto;
+    font-family: Arial, sans-serif;
+    max-width: 100%;
+    margin-top: 1rem;
+    line-height: 1.6;
+    overflow: hidden;
   }
   .uqbs-general-icon-container {
     min-width: 2.5rem;
