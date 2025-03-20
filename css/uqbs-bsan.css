@@ -89,6 +89,35 @@
 			padding-top: 32px;
 			padding-bottom: 32px;
 		}
+		.uq-animated-gradient-b{
+			display: block;
+			margin: 0 auto 16px;
+			margin-bottom: 16px;
+			background: var(--uq-purple);
+			height: 8px;
+			width: 100px;
+			padding: 0;
+			border-radius: 5px;
+		}
+		.uq-statementb{
+			display: block;
+			background-color: var(--uq-white);
+			width: 100%!important;
+			height: auto;
+			padding-top: 32px;
+			padding-bottom: 32px;
+			text-align: center;
+			font-weight: 400;
+		}
+		.uqbs-font-weight-normal{
+			font-weight: 400;
+		}
+		.uqbs-font-weight-normal b, .uqbs-font-weight-normal strong{
+			font-weight: bolder;
+		}
+		.uqbs-font-weight-heavy{
+			font-weight: bolder;
+		}
 /* Used for button generator */
 .bb-link-hover {background-color: transparent!important;}
 .bb-link-hover:hover {color: var(--uq-light-purple);}
