@@ -126,6 +126,13 @@
 		.uqbs-font-weight-heavy{
 			font-weight: bolder;
 		}
+		.uq-hero-basic-gradient{
+		  background-color: #262626; 
+	  	} 
+	  	.opacity65{ 
+		  opacity: 0.65;
+	  	}
+
 /* Used for button generator */
 .bb-link-hover {background-color: transparent!important;}
 .bb-link-hover:hover {color: var(--uq-light-purple);}
