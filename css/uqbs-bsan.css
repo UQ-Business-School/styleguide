@@ -109,6 +109,14 @@
 			text-align: center;
 			font-weight: 400;
 		}
+		.uq-statementc{
+		      display: block;
+		      width: 100%!important;
+		      height: auto;
+		      padding-top: 32px;
+		      padding-bottom: 32px;
+		      font-weight: 400;
+			    }
 		.uqbs-font-weight-normal{
 			font-weight: 400;
 		}
