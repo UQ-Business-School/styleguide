@@ -53,3 +53,37 @@
     white-space: nowrap;
     border: 0;
   }
+        .uqbs-copyright {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+			font-family: "Open Sans", Arial, sans-serif;
+			font-size: 13px;
+			padding-top: 2vh;
+			color: #262626;
+        }
+        .uqbs-copyright-disclaimer {
+            font-size: 8pt;
+            color: #999490;
+            text-align: center;
+        }
+		.uqbs-copyright table{
+			font-family: "Open Sans", Arial, sans-serif;
+			border: 1px solid #cdcdcd;
+			font-size: 0.875rem;
+			padding: 0px;
+			margin: 0px;
+			border-collapse: collapse;
+			border-spacing: 0;
+			color: #262626;
+		}
+		.uqbs-copyright th{
+			background-color: #f8f8f8;
+			border: 1px solid #cdcdcd;
+			color: #262626;
+		}
+		.uqbs-copyright th, .uqbs-copyright td{
+			padding: 0.75rem;
+			color: #262626;
+		}
