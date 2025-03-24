@@ -325,6 +325,10 @@ a:hover {
 	color: inherit;
 	border: 1px solid var(--uq-purple);
 }
+.bg-white-borderless{
+	background-color: var(--uq-white);
+	color: inherit;
+}
 /* -------------------- */
 
 /* Backgrounds - Gradients */
