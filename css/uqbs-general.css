@@ -87,6 +87,7 @@
 			padding: 0.75rem;
 			color: #262626;
 		}
+/* Custom settings for rich-text editor */
 .uqbs-tinymce{
       display: block;
       width: 100%!important;
@@ -94,3 +95,27 @@
       padding: 32px;
 	  margin-bottom: 0;	
     }
+  /* First row of the table head: purple background, white text, bold */
+  .uqbs-tinymce table thead tr:first-of-type {
+    background-color: #51247A;
+    color: #ffffff;
+    font-weight: bold;
+  }
+
+  /* Make sure text in the first header row is centred and vertically aligned */
+  .uqbs-tinymce table thead tr:first-of-type td {
+    text-align: center;
+    vertical-align: middle;
+  }
+
+  /* Second row of the table head: light neutral background */
+  .uqbs-tinymce table thead tr:nth-of-type(2) {
+    background-color: #d7d1cc;
+    text-align: center;
+    vertical-align: middle;
+  }
+
+  /* Even rows in the table body: striped background colour */
+  .uqbs-tinymce table tbody tr:nth-of-type(even) {
+    background-color: #f7f6f5;
+  }
