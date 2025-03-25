@@ -2830,7 +2830,12 @@ h5.icon-heading--top:before {
 
 .icon-list {
 	list-style-type: none;
-	padding-left: 0
+	padding-left: 0;
+}
+
+/* remove the bullets from assessment table */
+ul.icon-list li{ 
+	list-style-type: none!important;
 }
 
 @media (min-width:641px) {
