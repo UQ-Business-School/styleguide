@@ -93,8 +93,13 @@
       width: 100%!important;
       height: auto;
       padding: 32px;
-	  margin-bottom: 0;	
+      margin-bottom: 0;
+	  font-size: 0.875rem;
     }
+.uqbs-nopadding{
+      padding: 0!important;
+    }
+
   /* First row of the table head: purple background, white text, bold */
   .uqbs-tinymce table thead tr:first-of-type {
     background-color: #51247A;
