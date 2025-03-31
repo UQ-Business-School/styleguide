@@ -39,7 +39,7 @@
 			width: 100%;
 		}
 		.uqbs-bsan-maintext{
-			font-size: var(--font-size-xxxl);
+			font-size: var(--font-size-xxxxl);
 			line-height: var(--line-height-short);
 			color: var(--purple-500);
 			
@@ -48,12 +48,6 @@
 			color: var(--grey-800);
 			font-size: var(--font-size-m);
 			margin-top: 8px;
-			display: block;
-      			height: 2rem;
-      			width: 100%;
-      			margin-top: 0;
-      			margin-bottom: 0.5rem;
-      			padding: 0;
 		}
 		.uqbs-bsan-svgicon{
 			display: block;
@@ -76,11 +70,6 @@
 			padding: 0;
 			border-radius: 5px;
 		}
-		.uqbs-imageCredit{
-		  margin-top: 32px;
-		  margin-bottom: 0px;
-		  opacity: 0.5;
-	  	}
 		.uq-statementd{
 			display: block;
 			background-color: var(--uq-dark-grey20);
@@ -109,14 +98,6 @@
 			text-align: center;
 			font-weight: 400;
 		}
-		.uq-statementc{
-		      display: block;
-		      width: 100%!important;
-		      height: auto;
-		      padding-top: 32px;
-		      padding-bottom: 32px;
-		      font-weight: 400;
-			    }
 		.uqbs-font-weight-normal{
 			font-weight: 400;
 		}
@@ -126,16 +107,102 @@
 		.uqbs-font-weight-heavy{
 			font-weight: bolder;
 		}
-		.uq-hero-basic-gradient{
-		  background-color: #262626; 
-	  	} 
-	  	.opacity65{ 
-		  opacity: 0.65;
-	  	}
+/* For Stop & Think */
+		:root {
+		--svg-color: var(--brain-color, #000000);
+		--brain-color: var(--uq-dark-purple);	
+		}
 
-/* Used for button generator */
-.bb-link-hover {background-color: transparent!important;}
-.bb-link-hover:hover {color: var(--uq-light-purple);}
+		.stopthink {
+		position: relative;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		height: 90vh;
+		width: 90vh;
+		max-height: 500px;
+		max-width: 500px;	
+		min-height: 200px;
+		min-width: 200px;
+		background-color: var(--uq-purple);
+		color: var(--uq-white);
+		border-radius: 50%;
+		font-size: 2rem;
+		font-weight: 600;
+		margin: 20px auto 0 auto;
+		text-align: center;
+		overflow: hidden; /* Ensure the SVG doesn’t spill outside the circle */
+		z-index: 0;
+		}
+
+		.swoosh-wrapper {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		width: 90%;
+		pointer-events: none;
+		z-index: 1;
+		opacity: 0.3 !important;
+		}
+		.swoosh-svg {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		width: 90%;
+		height: auto;
+		transform: translate(-50%, -50%);
+		pointer-events: none;
+		z-index: 1;
+		opacity: 0; /* start hidden */
+		}
+
+		/* When AOS animates the element, force our transform */
+		.swoosh-svg.aos-animate {
+		transform: translate(-50%, -50%) !important;
+			opacity: 0.3 !important;
+		}
+
+		.stopthink-text {
+		position: relative;
+		z-index: 2; /* Ensures the text stays on top */
+		}
+
+/* For Number Divider */
+		.uqbs-divider-circle-over-line {
+			position: relative;      /* so children can be absolutely positioned within */
+			width: 100%;            /* or whatever width you need */
+			height: 50px;           /* enough height to accommodate the circle */
+			margin: 40px 0;         /* some spacing above/below, optional */
+		}
+		
+		.uqbs-divider-dotted-line {
+			position: absolute;
+			top: 50%;               /* line sits vertically in the middle of container */
+			left: 0;
+			width: 100%;
+			border-bottom: 2px dotted #CDCDCD; /* dotted line style */
+			transform: translateY(-50%);
+		}
+		
+		.uqbs-divider-circle {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);  /* centre the circle horizontally & vertically */
+			width: 56px;
+			height: 56px;
+			border-radius: 50%;
+			background-color: #51247A;         /* circle background colour */
+			font-family: Arial, sans-serif;
+			font-size: 1.2rem;	
+			color: #ffffff;
+			text-align: center;
+			line-height: 56px;                 /* vertically centre text inside the circle */
+			font-weight: bold;                 /* make the text stand out */
+		}
+
+
 /* -- Fix for the heroes, buttons having a url background color turning purple --*/
 .uq-hero-basic__back a:hover{background-color: transparent;}
 .uq-button {color: #fff;}
