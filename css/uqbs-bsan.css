@@ -173,7 +173,7 @@
 			position: relative;      /* so children can be absolutely positioned within */
 			width: 100%;            /* or whatever width you need */
 			height: 50px;           /* enough height to accommodate the circle */
-			margin: 40px 0;         /* some spacing above/below, optional */
+			margin: 5px;         /* some spacing above/below, optional */
 		}
 		
 		.uqbs-divider-dotted-line {
