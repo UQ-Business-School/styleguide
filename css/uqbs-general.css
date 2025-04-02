@@ -1,10 +1,13 @@
 /* CSS Document */
 /* Used for general course overview icons; can be used with or without the Super Style sheet */
-  .uqbs-general-container {
+  .hide-overflow{
+		overflow: hidden;
+		overscroll-behavior: none;
+	}
+	  .uqbs-general-container {
     display: flex;
     align-items: center; 
     width: 100%;
-    min-width: 250px;
     background: #51247A; 
     border-radius: 5px;
     overflow: auto;
@@ -15,7 +18,6 @@
     overflow: hidden;
   }
   .uqbs-general-icon-container {
-    min-width: 2.5rem;
     width: 2.5rem;
     height: 2.5rem;
     background-color: #FFF;
@@ -25,7 +27,19 @@
     display: flex;
     align-items: center;
     justify-content: center;
+	text-align: center;
   }
+	.uqbs-general-container span.uq-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  padding: 0;
+  margin: 0;
+  transform: translateX(3px); /* adjust the value until it looks centred */		
+}
+
   .uqbs-general-icon-container svg {
     width: 1.25rem;
     height: 1.25rem;
@@ -33,6 +47,7 @@
     stroke-width: 0.125rem;
     stroke-linecap: round;
     stroke-linejoin: round;
+	  
   }
   .uqbs-general-text {
     color: #FFFFFF;
@@ -42,6 +57,23 @@
     overflow-wrap: break-word;
     font-size: 1.2rem;
   }
+
+@media (max-width: 250px) {
+  .uqbs-general-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+	width: 100%;
+	  
+  }
+  .uqbs-general-icon-container {
+    margin: 1rem 0; /* adds some spacing below the icon */
+  }
+  .uqbs-general-text {
+    white-space: normal; /* ensure text wraps as needed */
+    padding: 0 1rem;     /* add horizontal padding if desired */
+  }
+}
   .uqbs-general-screen-reader-only {
     position: absolute;
     width: 1px;
