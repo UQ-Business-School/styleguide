@@ -2,7 +2,7 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>Rich-Text Editor</title>
+  <title>UQBS: Superstyle Sheet</title>
   <link rel="stylesheet" media="all" href="https://uq-business-school.github.io/styleguide/css/superstyle.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,21 +15,30 @@
       font-family: Arial, sans-serif;
       background-color: #f8f8f8;
     }
-    .bg-white {
+	.uqgenerator-container {
       max-width: 1200px;
       margin: 0 auto;
-      padding: 15px;
+      padding: 1em 3em;
       background-color: white;
       border-radius: 8px;
       overflow: hidden;
       box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
       border: 1px solid #CDCDCD;
+    }	
+    .bg-white {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 15px;
+      background-color: transparent;
+      overflow: hidden;
+      border: 0;
     }
 	</style>
 <body>  
 
       <div class="uqbs-tinymce uqbs-rounded-border--all bg-white">
         <div class="uq-container">
+			<div class="uqgenerator-container">
             <pre>@charset "utf-8";
 /* CSS Document */
 /* Import version for all CSS files used within UQ Business School */
@@ -57,7 +66,7 @@
 @import url("<a href="../../../styleguide/css/uqbs-bsan.css">https://uq-business-school.github.io/styleguide/css/uqbs-bsan.css</a>");</pre>
         </div>  
       </div>
-    
+    </div>
 <script>
 AOS.init({
   duration: 1200,
@@ -66,3 +75,4 @@ AOS.init({
 </script>  
 </body>
 </html>
+
