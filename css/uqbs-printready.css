@@ -1,0 +1,126 @@
+/* uqbs-printready.css - Print styles for Blackboard Ultra export */
+
+@media print {
+  * {
+    color-adjust: exact !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  body {
+    background: white !important;
+    color: #000 !important;
+    font-size: 12pt;
+    overflow: visible !important;
+  }
+
+  /* ===== HERO SECTION ===== */
+  .uq-hero-basic__image {
+    display: none !important;
+  }
+
+  .uq-hero-basic__content {
+    background: #51247A !important;
+    color: #fff !important;
+    padding: 2rem !important;
+    border-radius: 8px;
+  }
+
+  .uq-hero-basic__eyebrow,
+  .uq-hero-basic__title,
+  .uq-hero-subheading {
+    color: #fff !important;
+  }
+
+  .uq-hero-basic-gradient,
+  .uq-hero-basic-gradient-override {
+    background: none !important;
+  }
+
+  /* ===== ANIMATIONS (keep content, remove motion) ===== */
+  [data-aos] {
+    opacity: 1 !important;
+    transform: none !important;
+    animation: none !important;
+    transition: none !important;
+  }
+
+  [data-aos][data-aos-delay],
+  [data-aos][data-aos-duration] {
+    transition-delay: 0s !important;
+    transition-duration: 0s !important;
+  }
+
+  /* ===== ALERT STYLES ===== */
+  .uq-alert {
+    background: #f9f9f9 !important;
+    border: 1px solid #ccc !important;
+    color: #000 !important;
+    box-shadow: none !important;
+    padding: 1rem !important;
+  }
+
+  /* ===== BUTTONS ===== */
+  .uq-button {
+    background: none !important;
+    border: none !important;
+    color: #000 !important;
+    text-decoration: underline !important;
+    display: inline-block;
+    padding: 0 !important;
+    font-weight: bold;
+  }
+
+  /* ===== STOP & THINK / LOOKING AHEAD ===== */
+  .stopthink svg {
+    display: none !important;
+  }
+
+  .stopthink-text {
+    font-size: 1.5rem !important;
+    text-align: center !important;
+    color: #000 !important;
+  }
+
+  /* ===== TABLES ===== */
+  table {
+    border-collapse: collapse !important;
+    width: 100% !important;
+  }
+
+  table th, table td {
+    border: 1px solid #ccc !important;
+    padding: 0.5rem !important;
+    vertical-align: top !important;
+  }
+
+  table, th, td {
+    page-break-inside: avoid;
+  }
+
+  /* ===== LECTURE RECORDINGS PRINT FIX ===== */
+  .row {
+    display: block !important;
+    height: auto !important;
+  }
+
+  .left-container,
+  .right-container {
+    display: none !important;
+  }
+
+  .center-container {
+    width: 100% !important;
+    padding: 1rem !important;
+    text-align: left !important;
+  }
+
+  /* ===== MISC ===== */
+  script {
+    display: none !important;
+  }
+
+  .uq-container, .uq-hero-basic__content, .uq-statementd {
+    page-break-inside: avoid;
+  }
+}
