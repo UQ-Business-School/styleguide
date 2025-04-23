@@ -156,3 +156,13 @@
   .uqbs-tinymce table tbody tr:nth-of-type(even) {
     background-color: #f7f6f5;
   }
+
+/* ----------------------------------------------------------------- */
+/* Fixes for the image heros - removes purple on Text on Image Heros */
+/* ----------------------------------------------------------------- */
+
+ .uq-hero-basic-gradient-override{
+		  background-color: #262626!important; 
+	  } 
+ .uq-hero-basic__image-override, .opacity65{ opacity: 0.65!important;
+	  }
