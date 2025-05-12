@@ -207,6 +207,7 @@
 .uq-hero-basic__back a:hover{background-color: transparent;}
 .uq-button {color: #fff;}
 .bb-link-hover {background-color: transparent!important;}
+.bb-link-hover:hover {color: #962a8b;}
 /* -- call icons via: uq-icon--bsan--{icon-name} and add class 'uq-icon--light' to make all white --*/
 		.uq-icon--bsan--ethical-debate:before {
 			  content: "";
