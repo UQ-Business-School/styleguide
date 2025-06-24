@@ -77,7 +77,10 @@
 			height: auto;
 			padding-top: 32px;
 			padding-bottom: 32px;
+		}
+		.uq-statementd .uq-card__title{
 			line-height: var(--font-size-xxxl); /* Adding 2 rem line height to improve readability */
+			font-size: 1.2rem;
 		}
 		.uq-animated-gradient-b{
 			display: block;
