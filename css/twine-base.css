@@ -12,9 +12,12 @@
     --master-dark-color:var(--black);
 
      /* BACKGROUND COLORS: Adjust these elements as needed */
-    --bgc-tw-story: var(--master-background-color);
+    --bgc-tw-story: var(--master-background-color); /* This is the main background area */
     --bgc-tw-story-select: var(--master-background-color);
     --bgc-tw-textarea: var(--master-background-color);
+    --bgc-tw-passage: inherit;
+    --bgc-tw-sidebar: inherit;
+    --bgc-tw-dialog: #000;
     --bgc-twstory-input-text: var(--master-background-color);
     --bgc-error-error: rgba(223,58,190,.6);
     --bgc-error-warning: rgba(223,140,58,.6);
@@ -29,6 +32,9 @@
     --font-color-tw-link-hover: #00bfff;
     --font-color-tw-link-active: #dd4b39;
     --font-color-tw-broken-link: #933;
+    --font-color-tw-passage: inherit;
+    --font-color-tw-sidebar: inherit;
+    --font-color-tw-dialog: #FFF;
 
     /* Set or override scene background images */
     --bg-image-scene1: var(--bg-image-open-office);
@@ -1119,8 +1125,8 @@ tw-dialog {
     z-index: 999997;
     border: #fff solid 2px;
     padding: 2em;
-    color: #fff;
-    background-color: #000;
+    color: var(--font-color-tw-dialog);
+    background-color: var(--bgc-tw-dialog);
     display: block;
 }
 
@@ -1173,7 +1179,7 @@ tw-link,.enchantment-link {
 }
 
 tw-passage [style^=color] tw-link:not(:hover),tw-passage [style*=" color"] tw-link:not(:hover),tw-passage [style^=color][hover=true] tw-link:hover,tw-passage [style*=" color"][hover=true] tw-link:hover,tw-passage [style^=color] .enchantment-link:not(:hover),tw-passage [style*=" color"] .enchantment-link:not(:hover),tw-passage [style^=color][hover=true] .enchantment-link:hover,tw-passage [style*=" color"][hover=true] .enchantment-link:hover {
-    color: inherit;
+    color: var(--font-color-tw-passage);
 }
 
 tw-link:hover,.enchantment-link:hover {
@@ -1198,7 +1204,7 @@ tw-passage [style^=color] .visited:not(:hover),tw-passage [style*=" color"] .vis
 
 tw-broken-link {
     color: var(--font-color-tw-broken-link);
-    border-bottom: 2px solid #933;
+    border-bottom: 2px solid var(--font-color-tw-broken-link, #933);
     cursor: not-allowed;
 }
 
