@@ -114,6 +114,7 @@
 			height: auto;
 			padding-top: 32px;
 			padding-bottom: 32px;
+			font-size: 1.2rem;
 			line-height: var(--font-size-xxxl); /* Adding 2 rem line height to improve readability */
 		}
 		.uq-statementd .uq-card__title p,
