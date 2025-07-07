@@ -39,7 +39,7 @@
 			width: 100%;
 		}
 		.uqbs-bsan-maintext{
-			font-size: var(--font-size-xxxl);
+			font-size: var(--font-size-xxxxl);
 			line-height: var(--line-height-short);
 			color: var(--purple-500);
 			
@@ -61,6 +61,7 @@
 		.uq-hero-subheading{
 			color: var(--uq-dark-grey40);
 		}
+		/* Statement B */
 		.uq-animated-gradient{
 			display: block;
 			margin-bottom: 16px;
@@ -69,18 +70,6 @@
 			width: 100px;
 			padding: 0;
 			border-radius: 5px;
-		}
-		.uq-statementd{
-			display: block;
-			background-color: var(--uq-dark-grey20);
-			width: 100%!important;
-			height: auto;
-			padding-top: 32px;
-			padding-bottom: 32px;
-		}
-		.uq-statementd .uq-card__title{
-			line-height: var(--font-size-xxxl); /* Adding 2 rem line height to improve readability */
-			font-size: 1.2rem;
 		}
 		.uq-animated-gradient-b{
 			display: block;
@@ -103,6 +92,7 @@
 			font-weight: 400;
 			line-height: var(--font-size-xxxl); /* Adding 2 rem line height to improve readability */
 		}
+		/* Statement C */
 		.uq-statementc{
 			display: block;
 			width: 100%!important;
@@ -111,17 +101,47 @@
 			padding-bottom: 32px;
 			font-weight: 400;
 			line-height: var(--font-size-xxxl); /* Adding 2 rem line height to improve readability */
-    		}
+    	}
+		/* Statement D */
+		.uq-statementd{
+			display: block;
+			background-color: var(--uq-dark-grey20);
+			width: 100%!important;
+			height: auto;
+			padding-top: 32px;
+			padding-bottom: 32px;
+			line-height: var(--font-size-xxxl); /* Adding 2 rem line height to improve readability */
+		}
+		.uq-statementd .uq-card__title p,
+		 .uq-statementd .uq-card__title h4,
+		 .uq-statementd .uq-card__title h5, 
+		 .uq-statementd .uq-card__title h6{
+			font-size: 1.2rem;
+			line-height: 2;
+			color: inherit;
+			font-weight: normal;
+			text-rendering: optimizeLegibility;
+		  }
+		.uq-statementd .uq-card__title p strong,
+		  .uq-statementd .uq-card__title h4 strong,
+		  .uq-statementd .uq-card__title h5 strong, 
+		  .uq-statementd .uq-card__title h6 strong{
+			font-weight:700;
+		}
+		.uq-statementd .uq-card__title{
+			line-height: var(--font-size-xxxl); /* Adding 2 rem line height to improve readability */
+			font-size: 1.2rem;
+		}
 		.uqbs-font-weight-normal{
 			font-weight: 400;
 		}
 		.uqbs-font-weight-normal b, .uqbs-font-weight-normal strong{
-			font-weight: bolder;
+			font-weight: 700;
 		}
 		.uqbs-font-weight-heavy{
-			font-weight: bolder;
+			font-weight: 700;
 		}
-/* For Stop & Think */
+		/* For Stop & Think */
 		:root {
 		--svg-color: var(--brain-color, #000000);
 		--brain-color: var(--uq-dark-purple);	
@@ -333,7 +353,6 @@
 			  background-repeat: no-repeat;
 			  background-position: center center;
 			}
-
 /* -- for use within course overview page; works same as other uq icons; call icons via: uq-icon--mbusan--{icon-name} and add class 'uq-icon--light' to make all white --*/
 		.uq-icon--mbusan--ethical-debate:before {
 			  background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='UTF-8'%3F%3E%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='16px' height='16px' viewBox='0 0 16 16' version='1.1'%3E%3Cg id='surface1'%3E%3Cpath fill='%2351247A' d='M 8.007812 1.996094 C 5.695312 1.996094 3.816406 3.871094 3.816406 6.1875 C 3.808594 6.796875 3.941406 7.398438 4.199219 7.953125 C 4.324219 8.1875 4.46875 8.414062 4.625 8.628906 C 4.929688 9.039062 5.1875 9.484375 5.386719 9.953125 C 5.523438 10.449219 5.601562 10.960938 5.613281 11.476562 L 6.375 11.476562 C 6.363281 10.871094 6.269531 10.273438 6.101562 9.691406 C 5.882812 9.160156 5.597656 8.65625 5.257812 8.195312 C 5.117188 8.007812 4.992188 7.8125 4.875 7.609375 C 4.671875 7.160156 4.570312 6.671875 4.578125 6.179688 C 4.578125 4.277344 6.121094 2.738281 8.023438 2.738281 C 9.921875 2.738281 11.464844 4.277344 11.464844 6.179688 C 11.464844 6.679688 11.355469 7.167969 11.136719 7.617188 C 11.023438 7.820312 10.894531 8.015625 10.757812 8.203125 C 10.417969 8.664062 10.132812 9.164062 9.914062 9.691406 C 9.746094 10.273438 9.65625 10.878906 9.644531 11.484375 L 10.40625 11.484375 C 10.417969 10.96875 10.492188 10.457031 10.628906 9.960938 C 10.832031 9.492188 11.085938 9.046875 11.394531 8.636719 C 11.550781 8.417969 11.691406 8.183594 11.820312 7.945312 C 12.078125 7.394531 12.207031 6.789062 12.199219 6.179688 C 12.195312 3.867188 10.320312 1.996094 8.007812 1.996094 Z M 8.007812 1.996094 '/%3E%3Cpath fill='%2300a2c7' d='M 8.25 7.050781 C 8.128906 6.929688 7.9375 6.929688 7.816406 7.050781 L 6.675781 8.191406 L 7.765625 9.386719 L 7.765625 11.496094 L 8.390625 11.496094 L 8.390625 9.140625 L 7.535156 8.207031 L 8.257812 7.488281 C 8.375 7.367188 8.375 7.175781 8.257812 7.054688 C 8.253906 7.054688 8.25 7.050781 8.25 7.050781 Z M 8.25 7.050781 '/%3E%3Cpath fill='%2351247A' d='M 10.242188 12.246094 L 5.765625 12.246094 C 5.597656 12.246094 5.460938 12.382812 5.460938 12.550781 C 5.460938 12.71875 5.597656 12.855469 5.765625 12.855469 L 10.242188 12.855469 C 10.410156 12.855469 10.546875 12.71875 10.546875 12.550781 C 10.546875 12.382812 10.410156 12.246094 10.242188 12.246094 Z M 10.242188 12.246094 '/%3E%3Cpath fill='%2351247A' d='M 9.53125 13.390625 L 6.484375 13.390625 C 6.316406 13.390625 6.179688 13.527344 6.179688 13.695312 C 6.179688 13.863281 6.316406 14 6.484375 14 L 9.53125 14 C 9.703125 14 9.839844 13.863281 9.839844 13.695312 C 9.839844 13.527344 9.703125 13.390625 9.535156 13.390625 Z M 9.53125 13.390625 '/%3E%3Cpath fill='%2300a2c7' d='M 7.75 5.289062 L 6.710938 6.328125 C 6.597656 6.453125 6.605469 6.648438 6.730469 6.757812 C 6.847656 6.863281 7.023438 6.863281 7.140625 6.757812 L 8.179688 5.710938 C 8.304688 5.597656 8.3125 5.40625 8.203125 5.28125 C 8.089844 5.15625 7.894531 5.148438 7.769531 5.261719 C 7.761719 5.265625 7.757812 5.273438 7.75 5.28125 Z M 7.75 5.289062 '/%3E%3C/g%3E%3C/svg%3E%0A");
