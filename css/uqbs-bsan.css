@@ -102,6 +102,10 @@
 			font-weight: 400;
 			line-height: var(--font-size-xxxl); /* Adding 2 rem line height to improve readability */
     	}
+		.uq-statementc .uq-card__title p{
+			margin-bottom: 0;
+			padding-bottom: 0;
+		  }  
 		/* Statement D */
 		.uq-statementd{
 			display: block;
