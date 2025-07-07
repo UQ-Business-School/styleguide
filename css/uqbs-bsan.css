@@ -105,6 +105,16 @@
 		.uq-statementc .uq-card__title p{
 			margin-bottom: 0;
 			padding-bottom: 0;
+		  }
+		.uq-statementc .uq-card__title p,
+		 .uq-statementc .uq-card__title h4,
+		 .uq-statementc .uq-card__title h5, 
+		 .uq-statementc .uq-card__title h6{
+			font-size: 1.2rem;
+			line-height: 2;
+			color: inherit;
+			font-weight: normal;
+			text-rendering: optimizeLegibility;
 		  }  
 		/* Statement D */
 		.uq-statementd{
