@@ -1,0 +1,120 @@
+:root{
+    --uqbs-list-item-font-size: 0.875rem;       /* Default: 0.875 to match Blackboard */
+    --uqbs-list-item-font-weight: normal;
+    --uqbs-list-item-line-height: 1.7;
+    --uqbs-list-item-margin-bottom: calc(var(--uqbs-list-item-font-size)); /* Default: half of the --uqbs-list-item-font-size; adjust spacing between List items */ 
+    --uqbs-list-circle-top: 0%;             /* Default: 0; Change to 50% if you want the element vertically-centered */
+    --uqbs-list-circle-top-adjust: calc(var(--uqbs-list-item-font-size) - 50%); /* Default: half of the --uqbs-list-item-font-size; If you channged the last one to 50%, change this one to -50% */ 
+    --uqbs-list-circle-bg-color1: #51247A;   /* Level 1 Background color */
+    --uqbs-list-circle-font-color1: #FFFFFF; /* Level 1 Font color */
+    --uqbs-list-circle-bg-color2: #962A8B;   /* Level 2 Background color */
+    --uqbs-list-circle-font-color2: #FFFFFF; /* Level 2 Font color */
+    --uqbs-list-circle-bg-color3: #1F0029;   /* Level 3 Background color */
+    --uqbs-list-circle-font-color3: #FFFFFF; /* Level 3 Font color */
+    /* box shadow */
+    --uqbs-list-box-shadow-color: rgba(0,0,0,0.00); /*change the last value, "0.00" to add rounded box border */
+    --uqbs-list-box-shadow-offset-x: 0px;
+    --uqbs-list-box-shadow-offset-y: 2px;
+    --uqbs-list-box-shadow-blur-radius: 12px;
+    --uqbs-list-box-shadow-spread-radius: 0px;
+}    
+.uqbs-list-block {
+  max-width: 1200px;
+  margin: 2rem 1rem;
+  padding: 1.5rem 1.5rem;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: var(--uqbs-list-box-shadow-offset-x)
+              var(--uqbs-list-box-shadow-offset-y)
+              var(--uqbs-list-box-shadow-blur-radius)
+              var(--uqbs-list-box-shadow-spread-radius)
+              var(--uqbs-list-box-shadow-color);
+  overflow-x: hidden;
+  display: block;
+  font-weight: var(--uqbs-list-item-font-weight);
+}
+.uqbs-list-block li strong{font-weight: bold}
+
+.uqbs-list-item, .uqbs-list-item ol {
+  list-style: none;
+  margin: 0;
+  padding: 1.5rem;
+  counter-reset: uqbs-num;
+  font-weight: var(--uqbs-list-item-font-weight);
+}
+.uqbs-list-item > li, .uqbs-list-item ol > li {
+  position: relative;
+  padding-left: 3.2em;
+  min-height: 2.2em;
+  margin-bottom: var(--uqbs-list-item-margin-bottom);
+  font-size: var(--uqbs-list-item-font-size);
+  line-height: var(--uqbs-list-item-line-height);
+  animation: float 2s cubic-bezier(.77,0,.18,1) both;
+  opacity: 0;
+}
+.uqbs-list-item > li::before,
+.uqbs-list-item > li > ol > li::before,
+.uqbs-list-item > li > ol > li > ol > li::before {
+  position: absolute;
+  left: 0;
+  top: var(--uqbs-list-circle-top);
+  transform: translateY(var(--uqbs-list-circle-top-adjust));
+  width: 2.2em;
+  height: 2.2em;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 1.1em;
+  box-shadow: 0 2px 6px rgba(81,36,122,0.08);
+  z-index: 1;
+  color: var(--uqbs-list-circle-font-color1, #FFFFFF);
+  background: var(--uqbs-list-circle-bg-color1, #51247A);
+  content: '';
+}
+.uqbs-list-item > li::before {
+  content: counter(uqbs-num, decimal);
+  counter-increment: uqbs-num;
+  background: var(--uqbs-list-circle-bg-color1, #51247A);
+  color: var(--uqbs-list-circle-font-color1, #FFFFFF);
+}
+.uqbs-list-item > li > ol { counter-reset: uqbs-alpha; }
+.uqbs-list-item > li > ol > li::before {
+  content: counter(uqbs-alpha, lower-alpha);
+  counter-increment: uqbs-alpha;
+  background: var(--uqbs-list-circle-bg-color2, #962A8B);
+  color: var(--uqbs-list-circle-font-color2, #FFFFFF);
+}
+.uqbs-list-item > li > ol > li > ol { counter-reset: uqbs-roman; }
+.uqbs-list-item > li > ol > li > ol > li::before {
+  content: counter(uqbs-roman, lower-roman);
+  counter-increment: uqbs-roman;
+  background: var(--uqbs-list-circle-bg-color3, #1F0029);
+  color: var(--uqbs-list-circle-font-color3, #FFFFFF);
+}
+@keyframes float {
+  0%   { opacity: 0; transform: translateX(120px);}
+  50%  { opacity: 0.9; transform: translateX(calc(var(--uqbs-list-item-font-size)*-1));}
+  100% { opacity: 1; transform: translateX(0);}
+}
+@media (max-width: 600px) {
+  .uqbs-list-block { padding: 1rem 0.2rem; }
+  .uqbs-list-item > li, .uqbs-list-item ol > li {
+    font-size: 1rem; padding-left: 2.6em;
+  }
+}
+@media print {
+  .uqbs-list-item > li, .uqbs-list-item ol > li {
+    opacity: 1 !important; animation: none !important;
+  }
+}
+/* Remove default CSS marker list elements from master CSS file */
+.uqbs-list-block ol li::marker { content: ''; display: none; }
+.uqbs-list-block ol, 
+.uqbs-list-block ol ol, 
+.uqbs-list-block ol ol ol,
+.uqbs-list-block ol ol ol ol {
+  list-style-type: none !important;
+  list-style: none !important;
+}
