@@ -1,0 +1,167 @@
+:root{
+    --uqbs-list-item-font-size: 0.875rem;       
+    --uqbs-list-item-font-weight: normal;
+    --uqbs-list-item-line-height: 1.7;
+    --uqbs-list-item-margin-bottom: calc(var(--uqbs-list-item-font-size));
+    --uqbs-checkbox-top: 0%;  /* Default: 0; Change to 50% if you want the element vertically-centered */
+    --uqbs-checkbox-top-adjust: calc(var(--uqbs-list-item-font-size) - 50%); /* Default: half of the --uqbs-list-item-font-size; If you channged the last one to 50%, change this one to -50% */  
+    --uqbs-checkbox-size: 20px;
+    --uqbs-checkbox-border-color: #51247A;
+    --uqbs-checkbox-checked-bg: #51247A;
+    --uqbs-checkbox-checked-color: #FFFFFF;
+    --uqbs-checkbox-checked-text-color: #D7D1CC;
+    /* --uqbs-checkbox-hover-bg: transparent; */ /* Note: background hover to be supported in future update */
+    /* box shadow */
+    --uqbs-list-box-shadow-color: rgba(0,0,0,0.00); /*change the last value, "0.00" to add rounded box border, e.g. "0.3" */
+    --uqbs-list-box-shadow-offset-x: 0px;
+    --uqbs-list-box-shadow-offset-y: 2px;
+    --uqbs-list-box-shadow-blur-radius: 12px;
+    --uqbs-list-box-shadow-spread-radius: 0px;
+}    
+.uqbs-list-block {
+  max-width: 1200px;
+  margin: 2rem 1rem;
+  padding: 1.5rem 1.5rem;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: var(--uqbs-list-box-shadow-offset-x)
+              var(--uqbs-list-box-shadow-offset-y)
+              var(--uqbs-list-box-shadow-blur-radius)
+              var(--uqbs-list-box-shadow-spread-radius)
+              var(--uqbs-list-box-shadow-color);
+  overflow-x: hidden;
+  display: block;
+  font-weight: var(--uqbs-list-item-font-weight);
+}
+.uqbs-list-block li strong{font-weight: bold}
+
+.uqbs-list-item, .uqbs-list-item ol {
+  list-style: none;
+  margin: 0;
+  padding: var(--uqbs-list-item-font-size);
+  font-weight: var(--uqbs-list-item-font-weight);
+}
+.uqbs-list-item > li, .uqbs-list-item ol > li {
+  position: relative;
+  padding-left: 2.5em;
+  min-height: 2.2em;
+  margin-bottom: var(--uqbs-list-item-margin-bottom);
+  font-size: var(--uqbs-list-item-font-size);
+  line-height: var(--uqbs-list-item-line-height);
+  animation: float 2s cubic-bezier(.77,0,.18,1) both;
+  opacity: 0;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+/* .uqbs-list-item > li:hover,
+.uqbs-list-item ol > li:hover {
+  background-color: var(--uqbs-checkbox-hover-bg);
+  border-radius: 4px;
+} */
+
+.uqbs-list-item > li.completed,
+.uqbs-list-item ol > li.completed {
+  text-decoration: line-through;
+  opacity: 0.7;
+  color: var(--uqbs-checkbox-checked-text-color, #D7D1CC);
+}
+
+/* Fix for color of links on completed state */ 
+.uqbs-list-item > li.completed a,
+.uqbs-list-item ol > li.completed a,
+/* We also apply the same styling to the :hover state (when you mouse over the link) */
+.uqbs-list-item > li.completed a:hover,
+.uqbs-list-item ol > li.completed a:hover,
+/* And to the :visited state (after you've clicked on the link and visited its page) */
+.uqbs-list-item > li.completed a:visited,
+.uqbs-list-item ol > li.completed a:visited {
+  color: var(--uqbs-checkbox-checked-text-color, #D7D1CC);
+  background-color: transparent!important;
+}
+/* Smooth transition for completed state */
+.uqbs-list-item > li,
+.uqbs-list-item ol > li {
+  transition: color 0.3s ease, text-decoration 0.3s ease, opacity 0.3s ease;
+}
+
+.uqbs-list-item > li.completed,
+.uqbs-list-item ol > li.completed {
+  transition: color 0.3s ease, text-decoration 0.3s ease, opacity 0.3s ease;
+}
+
+/* Optional: animate children for smoother check feel */
+.uqbs-list-item > li label span,
+.uqbs-list-item ol > li label span {
+  display: inline-block;
+  transition: transform 0.25s ease, opacity 0.25s ease;
+}
+
+.uqbs-list-item > li.completed label span,
+.uqbs-list-item ol > li.completed label span {
+  transform: translateX(4px);
+  opacity: 0.7;
+}
+
+
+/* Custom checkbox styling */
+.uqbs-checkbox {
+  position: absolute;
+  left: 0;
+  top: var(--uqbs-checkbox-top);
+  transform: translateY(var(--uqbs-checkbox-top-adjust));
+  width: var(--uqbs-checkbox-size);
+  height: var(--uqbs-checkbox-size);
+  border: 2px solid var(--uqbs-checkbox-border-color);
+  border-radius: 4px;
+  background: white;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+  z-index: 1;
+}
+
+/*.uqbs-checkbox:hover {
+  background-color: var(--uqbs-checkbox-hover-bg);
+  border-color: var(--uqbs-checkbox-checked-bg);
+} */
+
+.uqbs-checkbox.checked {
+  background-color: var(--uqbs-checkbox-checked-bg);
+  border-color: var(--uqbs-checkbox-checked-bg);
+}
+
+.uqbs-checkbox.checked::after {
+  content: '✓';
+  color: var(--uqbs-checkbox-checked-color);
+  font-weight: bold;
+  font-size: 14px;
+}
+
+@keyframes float {
+  0%   { opacity: 0; transform: translateX(120px);}
+  50%  { opacity: 0.9; transform: translateX(calc(var(--uqbs-list-item-font-size)*-1));}
+  100% { opacity: 1; transform: translateX(0);}
+}
+@media (max-width: 600px) {
+  .uqbs-list-block { padding: 1rem 0.2rem; }
+  .uqbs-list-item > li, .uqbs-list-item ol > li {
+    font-size: 1rem; padding-left: 2.6em;
+  }
+}
+@media print {
+  .uqbs-list-item > li, .uqbs-list-item ol > li {
+    opacity: 1 !important; animation: none !important;
+  }
+}
+/* Remove default CSS marker list elements from master CSS file */
+.uqbs-list-block ol li::marker { content: ''; display: none; }
+.uqbs-list-block ol, 
+.uqbs-list-block ol ol, 
+.uqbs-list-block ol ol ol,
+.uqbs-list-block ol ol ol ol {
+  list-style-type: none !important;
+  list-style: none !important;
+}
